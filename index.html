@@ -1,51 +1,64 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>  
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Formulário - dados de cartão</title>
-        <link rel="stylesheet" href="reset.css">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <section>
 
-        </section>
-        <main>
-            <form>
-                <label for="titular">
-                    Nome do titular
-                    <input type="text" name="" id="titular" placeholder="Nome do titular">
-                </label>
-                <label for="numero">
-                    Número do cartão
-                    <input type="number" name="" id="numero" placeholder="Ex: 9999 9999 9999 9999">
-                </label>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário - dados de cartão</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
 
-                <div>
-                    Data de vencimento (MM/YY)
-                    <div>
-                        <input type="number" placeholder="MM">
-                        <input type="number" placeholder="YY">
-                    </div>
-                </div>
+<body>
+    <section>
+        <div class="imgCard CardBack">
 
-                <label for="cvv">
+        </div>
+        <div class="imgCard CardFront">
+
+        </div>
+    </section>
+    <main>
+        <form>
+            <label class="label" for="titular">
+                Nome do titular
+                <input type="text" name="" id="titular" placeholder="Nome do titular">
+            </label>
+            <label class="label" for="numero">
+                Número do cartão
+                <input type="number" name="" id="numero" placeholder="Ex: 9999 9999 9999 9999">
+            </label>
+
+
+
+            <div class="divDataCVV">
+                <fieldset class="data">
+                    <legend>Data de vencimento (MM/YY)</legend>
+
+                    <input class="inputData" type="number" placeholder="MM">
+                    <input class="inputData" type="number" placeholder="YY">
+                </fieldset>
+
+
+                <label class="labelCVV" for="cvv">
                     CVV
-                    <input type="number" placeholder="Ex: 999">
+                    <input class="inputCVV" type="number" placeholder="Ex: 999">
                 </label>
-                   
-                <button>
-                    Confirmar
-                </button>
-            </form>
-        </main>
-        <footer>
-            <div class="attribution">
-                Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-                Coded by <a href="#">Kaio Araujo</a>.
-              </div>
-        </footer>
-    </body>
-    <script src="js/main.js"></script>
+
+            </div>
+
+            <button>
+                Confirmar
+            </button>
+        </form>
+    </main>
+    <footer>
+        <div class="attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+            Coded by <a href="#">Kaio Araujo</a>.
+        </div>
+    </footer>
+</body>
+<script src="js/main.js"></script>
+
 </html>
