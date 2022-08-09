@@ -11,10 +11,10 @@
 
 <body>
     <section>
-        <div class="imgCard CardBack">
+        <div class="imgCard CardFront">
 
         </div>
-        <div class="imgCard CardFront">
+        <div class="imgCard CardBack">
 
         </div>
     </section>
@@ -22,32 +22,33 @@
         <form>
             <label class="label" for="titular">
                 Nome do titular
-                <input type="text" name="" id="titular" placeholder="Nome do titular">
+                <input class="input" type="text" name="" id="titular" placeholder="Nome do titular">
             </label>
             <label class="label" for="numero">
                 Número do cartão
-                <input type="number" name="" id="numero" placeholder="Ex: 9999 9999 9999 9999">
+                <input class="input" type="number" name="" id="numero" placeholder="Ex: 9999 9999 9999 9999">
             </label>
 
 
-
             <div class="divDataCVV">
-                <fieldset class="data">
-                    <legend>Data de vencimento (MM/YY)</legend>
+                <div class="divData">
+                    <label for="">Data de vencimento (MM/YY)</label>
+                    
+                    <div class="divInputsData">
+                        <input class="input inputData" type="number" placeholder="MM">
+                        <input class="input inputData" type="number" placeholder="YY">
+                    
+                    </div>
+                   
+                </div>
 
-                    <input class="inputData" type="number" placeholder="MM">
-                    <input class="inputData" type="number" placeholder="YY">
-                </fieldset>
-
-
-                <label class="labelCVV" for="cvv">
-                    CVV
-                    <input class="inputCVV" type="number" placeholder="Ex: 999">
-                </label>
-
+                <div>
+                    <label for="">CVV</label>
+                    <input class="input inputCVV" type="number" placeholder="Ex: 999">
+                </div>
             </div>
 
-            <button>
+            <button class="button">
                 Confirmar
             </button>
         </form>
