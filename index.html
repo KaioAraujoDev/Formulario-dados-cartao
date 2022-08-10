@@ -20,35 +20,58 @@
     </section>
     <main>
         <form>
-            <label class="label" for="titular">
-                Nome do titular
-                <input class="input" type="text" name="" id="titular" placeholder="Nome do titular">
-            </label>
-            <label class="label" for="numero">
-                Número do cartão
-                <input class="input" type="number" name="" id="numero" placeholder="Ex: 9999 9999 9999 9999">
-            </label>
+            <div class="divFields divNome">
+                <label class="label" for="titular">Nome do titular</label>
+                
+                <input class="input" type="text" name="titular" id="titular" placeholder="Nome do titular">
+                
+                <div class="erro" id="erro-titular">
+                    Titular inválido
+                </div>
 
+            </div>
+           
+            <div class="divFields divNumero">
+                <label for="numero">Número do cartão</label>
 
+                <input class="input" type="number" name="numero" id="numero" placeholder="Ex: 9999 9999 9999 9999">
+                
+                <div class="erro" id="erro-numero">
+
+                </div>
+    
+           </div>    
+                
+          
             <div class="divDataCVV">
                 <div class="divData">
-                    <label for="">Data de vencimento (MM/YY)</label>
+                    <label for="">Data de vencimento</label>
                     
                     <div class="divInputsData">
-                        <input class="input inputData" type="number" placeholder="MM">
-                        <input class="input inputData" type="number" placeholder="YY">
+                        <input class="input inputData" id="mes" name="mes" type="number" placeholder="MM">
+                        <input class="input inputData" id="ano" name="ano" type="number" placeholder="YY">
                     
                     </div>
-                   
+                    
+                    <div class="erro" id="erro-data">
+
+                    </div>
                 </div>
 
-                <div>
+                
+                
+                <div class="divCVV">
                     <label for="">CVV</label>
-                    <input class="input inputCVV" type="number" placeholder="Ex: 999">
+                    <input class="input inputCVV" id="cvv" name="cvv" type="number" placeholder="Ex: 999">
+                    <div class="erro" id="erro-cvv">
+
+                    </div>
                 </div>
+
+               
             </div>
 
-            <button class="button">
+            <button id="buttonSubmit" type="submit" class="button">
                 Confirmar
             </button>
         </form>

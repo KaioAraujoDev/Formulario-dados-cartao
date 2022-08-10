@@ -49,19 +49,12 @@ form {
     flex-direction: column;
     height: 100%;
 }
-label.label{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 85%;
-    height: 2.5em;
-    margin-bottom: 1em;
-}
 
 .input{
-    padding: 1em;
+    padding: 0.85em;
     border:1px solid #ccc;
     border-radius: 0.65em;
+    outline: none;
 }
 .input::placeholder{
     color:#cecdce;
@@ -69,18 +62,51 @@ label.label{
     letter-spacing: 0.15ch;
 }
 
+label{
+    margin-bottom: 0.25em;
+}
+.divFields{
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+}
 .divDataCVV{
     width:85%;
+    display: flex;
+    margin-bottom: 2em;
 }
 .divData{
     display: inline-block;
-    width:50%;
+    width:45%;
 }
+
+.divInputsData{
+    display: flex;
+    justify-content: space-between;
+    margin-top:0.25em;
+}
+
 .inputData{
     width: 25%;
 }
+.divCVV{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 1em;
+}
 
+.inputCVV{
+    width: 50%;
+}
 
+/*Erro*/
+.erro{
+    width: 85%;
+    color: red;
+    font-size: 0.85em;
+    padding: 1em 0;
+}
 .button{
     padding:0.5em;
     background:#220930;
