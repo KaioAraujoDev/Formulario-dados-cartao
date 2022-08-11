@@ -74,7 +74,6 @@ label{
 .divDataCVV{
     width:85%;
     display: flex;
-    margin-bottom: 2em;
 }
 .divData{
     display: inline-block;
@@ -96,7 +95,6 @@ label{
 .divCVV{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     padding-left: 1em;
 }
 .divCVV label {
@@ -118,9 +116,8 @@ label{
 .visible {
   visibility: visible;
 }
-.outlineError{
-    outline-width: 1px;
-    outline-color: red;
+.borderError{
+    border: 1px solid red;
 }
 
 .button{
