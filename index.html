@@ -19,14 +19,14 @@
         </div>
     </section>
     <main>
-        <form>
+        <form id="form">
             <div class="divFields divNome">
                 <label class="label" for="titular">Nome do titular</label>
                 
                 <input class="input" type="text" name="titular" id="titular" placeholder="Nome do titular">
                 
                 <div class="erro" id="erro-titular">
-                    Titular inválido
+                   
                 </div>
 
             </div>
@@ -45,7 +45,7 @@
           
             <div class="divDataCVV">
                 <div class="divData">
-                    <label for="">Data de vencimento</label>
+                    <label class="labelData" for="">Data de vencimento</label>
                     
                     <div class="divInputsData">
                         <input class="input inputData" id="mes" name="mes" type="number" placeholder="MM">
@@ -58,17 +58,21 @@
                     </div>
                 </div>
 
+                  
                 
                 
+
                 <div class="divCVV">
                     <label for="">CVV</label>
                     <input class="input inputCVV" id="cvv" name="cvv" type="number" placeholder="Ex: 999">
+                    
                     <div class="erro" id="erro-cvv">
 
                     </div>
                 </div>
 
-               
+                
+
             </div>
 
             <button id="buttonSubmit" type="submit" class="button">

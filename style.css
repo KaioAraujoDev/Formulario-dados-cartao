@@ -54,7 +54,8 @@ form {
     padding: 0.85em;
     border:1px solid #ccc;
     border-radius: 0.65em;
-    outline: none;
+    outline-width: 1px;
+    outline-color: #652ec7;
 }
 .input::placeholder{
     color:#cecdce;
@@ -89,11 +90,17 @@ label{
 .inputData{
     width: 25%;
 }
+.labelData {
+    height: 2em;
+}
 .divCVV{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding-left: 1em;
+}
+.divCVV label {
+    height: 2em;
 }
 
 .inputCVV{
@@ -106,7 +113,16 @@ label{
     color: red;
     font-size: 0.85em;
     padding: 1em 0;
+    visibility: hidden;
 }
+.visible {
+  visibility: visible;
+}
+.outlineError{
+    outline-width: 1px;
+    outline-color: red;
+}
+
 .button{
     padding:0.5em;
     background:#220930;
