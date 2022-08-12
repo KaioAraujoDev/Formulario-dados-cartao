@@ -1,9 +1,12 @@
 const buttonSubmit = document.querySelector('#buttonSubmit');
+const buttonReset = document.querySelector('#buttonReset');
+const form = document.getElementById('form');
+const divConclusao = document.getElementById('divConclusao');
 
-function buscaDataAtual(){
-    const data =  new Date();
+function buscaDataAtual() {
+    const data = new Date();
     dataAtual = data.getFullYear().toString();
-    dataAtual = dataAtual.substring(dataAtual.length - 2,dataAtual.length);
+    dataAtual = dataAtual.substring(dataAtual.length - 2, dataAtual.length);
 
     return dataAtual;
 
@@ -13,10 +16,35 @@ function buscaDataAtual(){
 buttonSubmit.addEventListener('click', (event) => {
     event.preventDefault();
     resetaClasses();
-    validar();
 
+    if (validar()) {
+        resetaValores();
+        exibirConclusao();
+    }
 })
 
+//Função para resetar valores do formulário
+function resetaValores() {
+    titular.value = "";
+    numero.value = "";
+    mes.value = "";
+    ano.value = "";
+    cvv.value = "";
+}
+//Retorna ao estado inicial do formulário
+buttonReset.addEventListener('click', () => {
+    form.classList.remove('invisible');
+    divConclusao.classList.add('invisible');
+});
+
+
+//Exibir tela de conclusão 
+function exibirConclusao() {
+    form.classList.add('invisible');
+    divConclusao.classList.remove('invisible');
+}
+
+//Remover estilização de bordas e divisões de erros 
 function resetaClasses() {
     //Removendo bordas 
 
@@ -40,49 +68,57 @@ function resetaClasses() {
 
 }
 
-function validar(){
+//Verificar se todos os campos foram preenchidos corretamente
+function validar() {
 
-    if(titular.value == ""){
-        exibirErro(titular.id , "Titular inválido");
-        
+    if (titular.value == "") {
+        exibirErro(titular.id, "Titular inválido");
+        return false;
     }
 
-    if(numero.value.length < 16){
-        exibirErro(numero.id , "Número de cartão inválido");
+    if (numero.value.length < 16) {
+        exibirErro(numero.id, "Número de cartão inválido");
+        return false;
     };
 
-    if(mes.value == "" || mes.value > 12){
+    if (mes.value == "" || mes.value > 12) {
         exibirErro(mes.id, "Data inválida");
-     }
+        return false;
+    }
 
-    if((ano.value.length == 0 || ano.value.length > 2) || ( ano.value < buscaDataAtual() ) ){
+    if ((ano.value.length == 0 || ano.value.length > 2) || (ano.value < buscaDataAtual())) {
         exibirErro(ano.id, "Data inválida");
+        return false;
     }
-    if(cvv.value.length != 3){
+    if (cvv.value.length != 3) {
         exibirErro(cvv.id, "CVV inválido");
+        return false;
     }
+
+    return true;
 }
 
-function exibirErro(id, msg){
+//Exibição de erro no formulário
+function exibirErro(id, msg) {
     //selecionando o input a ser destado 
 
     const campoErro = document.querySelector(`input#${id}`)
-    
+
     //selecionando o bloco de erro a ser alterado
     //caso seja um mês ou ano selecione o campo databa
     //se não selecione o campo com o seu id 
 
     let erro = ""
-    
-    if(id == "mes" || id == "ano"){
+
+    if (id == "mes" || id == "ano") {
         erro = document.querySelector(`#erro-data`);
-        
-    }else{
+
+    } else {
         erro = document.querySelector(`#erro-${id}`);
-        
+
     }
     erro.classList.add('visible');
     campoErro.classList.add('borderError');
     erro.innerText = msg;
-    
+
 }
