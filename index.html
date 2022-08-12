@@ -10,11 +10,30 @@
 </head>
 
 <body>
-    <section>
+    <section class="sectionCards">
         <div class="imgCard CardFront">
+            <section class="headerCard">
+                <img class="iconCircleFill"src="assets/circleFill.png" alt="Circle Fill">
+                <img class="iconCircle" src="assets/circle.png" alt="Circle">
+            </section>
+            
+            <section id="sectionNumbersCard" class="sectionNumbersCard">
+                1234123412341234
+            </section>
+
+            <section class="footerCard">
+                <div id="divClient" class="divClient">
+                    KAIO ARAUJO
+                </div>
+                <div id="divDataVencimento" class="divDataVencimento">
+                    08/20
+                </div>
+            </section>
         </div>
         <div class="imgCard CardBack">
+            <div class="divCVV">
 
+            </div>
         </div>
     </section>
     <main>
@@ -58,9 +77,6 @@
                 </div>
 
                   
-                
-                
-
                 <div class="divCVV">
                     <label for="">CVV</label>
                     <input class="input inputCVV" id="cvv" name="cvv" type="number" placeholder="Ex: 999">
@@ -93,5 +109,5 @@
     </footer>
 </body>
 <script src="js/main.js"></script>
-
+<script src="js/cardsData.js"></script>
 </html>

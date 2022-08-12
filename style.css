@@ -1,47 +1,79 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Roboto:wght@300&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 
-body{
+
+body {
     font-family: 'Space Grotesk', sans-serif;
     font-size: 1.15em;
 }
 
-section{
-    background:url(assets/bg-main-mobile.png) no-repeat ;
+.sectionCards {
+    background: url(assets/bg-main-mobile.png) no-repeat;
     background-size: cover;
-    height:26.5vh;
-    width:100vw;
+    height: 26.5vh;
+    width: 100vw;
     position: relative;
-}   
+}
 
+/* Cartão   */
 .imgCard {
-    height:8em;
-    width:15em;
-    background-size:cover;
+    height: 8em;
+    width: 15em;
+    background-size: cover;
     border-radius: 0.25em;
 }
 
-.CardBack{
-    background-image:url(assets/bg-card-back.png);
+.CardBack {
+    background-image: url(assets/bg-card-back.png);
     background-repeat: no-repeat;
     position: absolute;
-    top:15%;
+    top: 15%;
     right: 7%;
-}   
+}
 
-.CardFront{
+.CardFront {
     background-image: url(assets/bg-card-front.png);
     background-repeat: no-repeat;
-    position:absolute;
+    position: absolute;
     z-index: 1;
     bottom: -20%;
     left: 7%;
-
+    padding: 0.75em;
+    box-sizing: border-box;
+    color: white;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-main{
-   
+/*Conteúdo cartão frontal*/
+.headerCard {
+    display: flex;
+    align-items: center;
+    width: 40%;
+}
+
+.iconCircleFill {
+    width: 30%;
+    margin-right: 0.5em;
+}
+
+.iconCircle {
+    width: 15%;
+}
+
+.footerCard {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.7em;
+    font-weight: 100;
+    text-transform: uppercase;
+}
+
+main {
+
     height: 70vh;
 }
+
 form {
     display: flex;
     justify-content: center;
@@ -50,110 +82,124 @@ form {
     height: 100%;
 }
 
-.input{
+.input {
     padding: 0.85em;
-    border:1px solid #ccc;
+    border: 1px solid #ccc;
     border-radius: 0.65em;
     outline-width: 1px;
     outline-color: #652ec7;
 }
-.input::placeholder{
-    color:#cecdce;
+
+.input::placeholder {
+    color: #cecdce;
     font-size: 1.25em;
     letter-spacing: 0.15ch;
 }
 
-label{
+label {
     margin-bottom: 0.25em;
 }
-.divFields{
+
+.divFields {
     display: flex;
     flex-direction: column;
     width: 85%;
 }
-.divDataCVV{
-    width:85%;
+
+.divDataCVV {
+    width: 85%;
     display: flex;
 }
-.divData{
+
+.divData {
     display: inline-block;
-    width:45%;
+    width: 45%;
 }
 
-.divInputsData{
+.divInputsData {
     display: flex;
     justify-content: space-between;
-    margin-top:0.25em;
+    margin-top: 0.25em;
 }
 
-.inputData{
+.inputData {
     width: 25%;
 }
+
 .labelData {
     height: 2em;
 }
-.divCVV{
+
+.divCVV {
     display: flex;
     flex-direction: column;
     padding-left: 1em;
 }
+
 .divCVV label {
     height: 2em;
 }
 
-.inputCVV{
+.inputCVV {
     width: 50%;
 }
 
 /*Erro*/
-.erro{
+.erro {
     width: 85%;
     color: red;
     font-size: 0.85em;
     padding: 1em 0;
     visibility: hidden;
 }
+
 .visible {
-  visibility: visible;
+    visibility: visible;
 }
-.borderError{
+
+.borderError {
     border: 1px solid red;
 }
 
-.button{
-    padding:0.5em;
-    background:#220930;
-    color:#f9eafc;
+.button {
+    padding: 0.5em;
+    background: #220930;
+    color: #f9eafc;
     font-size: 1.15em;
     font-weight: 500;
     border: none;
     border-radius: 0.25em;
     width: 80%;
-    
+
 }
+
 /*Tela de conclusão*/
 
-.divConclusao{
+.divConclusao {
     display: flex;
     flex-direction: column;
     height: 100%;
     justify-content: center;
     align-items: center;
 }
-.icon{
-    width: 35%;
+
+.icon {
+    width: 25%;
     margin-bottom: 1em;
 }
-.titleConclusion{
+
+.titleConclusion {
     font-size: 1.75em;
     margin-bottom: 0.5em;
 }
-.descriptionConclusion{
+
+.descriptionConclusion {
     color: #929194;
     width: 85%;
     margin-bottom: 2em;
     text-align: center;
 }
-.invisible{
+
+.invisible {
     display: none;
 }
