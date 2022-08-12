@@ -30,6 +30,12 @@ function resetaValores() {
     mes.value = "";
     ano.value = "";
     cvv.value = "";
+
+    divClient.innerText = "";
+    sectionNumbersCard.innerText = "";
+    divMes.innerText = "00";
+    divAno.innerText = "00";
+    divCVV.innerText = "";
 }
 //Retorna ao estado inicial do formulário
 buttonReset.addEventListener('click', () => {

@@ -28,6 +28,12 @@ body {
     position: absolute;
     top: 15%;
     right: 7%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 10%;
+    box-sizing: border-box;
+    font-weight: 500;
 }
 
 .CardFront {
@@ -67,6 +73,10 @@ body {
     font-size: 0.7em;
     font-weight: 100;
     text-transform: uppercase;
+}
+
+.divDataVencimento{
+    display: flex;
 }
 
 main {
