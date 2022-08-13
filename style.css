@@ -46,7 +46,7 @@ body {
     padding: 0.75em;
     box-sizing: border-box;
     color: white;
-    display:flex;
+    display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
@@ -75,7 +75,7 @@ body {
     text-transform: uppercase;
 }
 
-.divDataVencimento{
+.divDataVencimento {
     display: flex;
 }
 
@@ -212,4 +212,13 @@ label {
 
 .invisible {
     display: none;
+}
+
+
+/*Footer*/
+
+.attribution {
+    font-size: 0.75em;
+    text-align: center;
+    color: #ccc;
 }
