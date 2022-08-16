@@ -25,6 +25,7 @@ body {
 .CardBack {
     background-image: url(assets/bg-card-back.png);
     background-repeat: no-repeat;
+    background-size: contain;
     position: absolute;
     top: 15%;
     right: 7%;
